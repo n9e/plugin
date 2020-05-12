@@ -30,7 +30,7 @@ class RedisStats:
 
 def main():
     # ip = socket.gethostname()
-    ip = commands.getoutput('''hostname -I''').strip()
+    ip = commands.getoutput('''ifconfig `route|grep '^default'|awk '{print $NF}'`|grep inet|awk '{print $2}'|head -n 1''').strip()
     timestamp = int(time.time())
     step = int(os.path.basename(sys.argv[0]).split("_", 1)[0])
     # inst_list中保存了redis配置文件列表，程序将从这些配置中读取port和password，建议使用动态发现的方法获得，如：
