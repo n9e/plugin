@@ -62,7 +62,7 @@ def get_xml_size():
                     t['metric'] = 'activemq_%s_rate' % item[0]
                 elif ctype=='GAUGE':
                     t['metric'] = 'activemq_%s' % item[0]
-                t['value'] = dic[item[1]]
+                t['value'] = eval(dic[item[1]])
                 t['counterType'] = ctype
                 output.append(t)
     return output
