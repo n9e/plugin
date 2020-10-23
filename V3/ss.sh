@@ -19,35 +19,35 @@ timestamp=$(date +%s)
 
 echo '[
     {
-        "endpoint": "'${localip}'",
+        "endpoint": "",
         "tags": "",
         "timestamp": '${timestamp}',
         "metric": "net.ss.estab",
         "value": '${ss_estab}'
     },
     {
-        "endpoint": "'${localip}'",
+        "endpoint": "",
         "tags": "",
         "timestamp": '${timestamp}',
         "metric": "net.ss.closed",
         "value": '${ss_closed}'
     },
     {
-        "endpoint": "'${localip}'",
+        "endpoint": "",
         "tags": "",
         "timestamp": '${timestamp}',
         "metric": "net.ss.orphaned",
         "value": '${ss_orphaned}'
     },
     {
-        "endpoint": "'${localip}'",
+        "endpoint": "",
         "tags": "",
         "timestamp": '${timestamp}',
         "metric": "net.ss.synrecv",
         "value": '${ss_synrecv}'
     },
     {
-        "endpoint": "'${localip}'",
+        "endpoint": "",
         "tags": "",
         "timestamp": '${timestamp}',
         "metric": "net.ss.timewait",
