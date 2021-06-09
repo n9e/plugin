@@ -2,7 +2,7 @@
 
 Activities=$(w |awk -F ':' '{if(NR>2) print $1}' |wc -l)
 
-localip=$(/usr/sbin/ifconfig `/usr/sbin/route|grep '^default'|awk '{print $NF}'`|grep inet|awk '{print $2}'|head -n 1)
+localip=$(/usr/sbin/ifconfig `/usr/sbin/route -n|grep '^default'|awk '{print $NF}'`|grep inet|awk '{print $2}'|head -n 1)
 step=$(basename $0|awk -F'_' '{print $1}')
 timestamp=$(date +%s)
 echo '[
